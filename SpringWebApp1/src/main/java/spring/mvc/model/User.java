@@ -1,10 +1,23 @@
 package spring.mvc.model;
 
+import javax.persistence.Table;
+
+@javax.persistence.Entity
+@Table(name = "user_details")
 public class User {
+	@javax.persistence.Id
+	@javax.persistence.GeneratedValue(strategy = javax.persistence.GenerationType.AUTO)
+	private int id;
 	private String email;
 	private String username;
 	private String password;
 	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getEmail() {
 		return email;
 	}
