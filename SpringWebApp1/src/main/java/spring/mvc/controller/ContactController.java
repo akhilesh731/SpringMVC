@@ -32,8 +32,8 @@ public class ContactController {
 	 
 	@RequestMapping("/processform")
 	public String handleForm(
-			@RequestParam("email") String email, 
-			@RequestParam("username") String name,
+			@RequestParam(value = "email", defaultValue = "default@gmail.com") String email, 
+			@RequestParam(value = "username", required = false) String name,
 			@RequestParam("password") String password, Model model) {
 		System.out.println("handleForm_");
 		

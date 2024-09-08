@@ -25,6 +25,7 @@ public class HomeController {
 		return "index";
 	}
 	
+	//http://localhost:8080/SpringWebApp1/help
 	@RequestMapping("/help")
 	public ModelAndView help() {
 		System.out.println("help_");

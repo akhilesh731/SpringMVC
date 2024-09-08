@@ -18,7 +18,7 @@
 <body>
 	<div class="container mt-5">
 	<h3 class="text-center">Registration Form</h3>
-		<form action="processform1">
+		<form action="processform">
 		<div class="mb-3">
     		<label for="exampleInputEmail1" class="form-label">Email address</label>
     		<input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
