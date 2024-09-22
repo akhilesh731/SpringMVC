@@ -25,7 +25,8 @@ public class ProductDao {
 	@Transactional
 	public void createNewProduct(Product product) {
 		System.out.println("create()");
-		this.hibernateTemplate.save(product);
+		System.out.println(product);
+		this.hibernateTemplate.saveOrUpdate(product);
 	}
 	
 	public List<Product> getAllProducts() {
@@ -36,7 +37,7 @@ public class ProductDao {
 	
 	public Product getProductById(int id) {
 		System.out.println("getById()");
-		Product product = this.hibernateTemplate.load(Product.class, id);
+		Product product = this.hibernateTemplate.get(Product.class, id);
 		return product;
 	}
 	
